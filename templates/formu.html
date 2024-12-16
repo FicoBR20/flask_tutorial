@@ -1,0 +1,20 @@
+{% extends "padre_standar.html" %}
+
+{% block body %}
+    <!-- el valor del campo name sera como referenciaremos esta esta etiqueta 
+     "El_nombre" es la referencia (name), ademas debo definir una accion para
+     el formulario (a donde envio el formulario), para esto uso la sintaxis de
+    flask, doble llave (siempre para llamar a una funcion), entonces, uso la 
+    funcion de flask "url_for('metodo de la funcion en donde deseo enviar el 
+    formulario, o sea que este metodo,regresa la ruta de la funcion que se le
+    pasa como parametro'); ademas defino el tipo de metodo "post" el mismo de la
+    funcion del archivo en python -->
+
+<h1>Bienvenido!</h1>
+<form action="{{ url_for('contact_func') }}" method="post"> <!-- metodo a donde envio el formulario -->
+
+    <input type="text" name="El_nombre" placeholder="Ingresa un nombre">
+    <button>Enviar</button>
+</form>
+
+{% endblock %}

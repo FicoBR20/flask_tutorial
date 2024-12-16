@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion de Flask</title>
+</head>
+<body>
+    <h1>hola</h1>
+    <h2>Bienvenidos</h2>
+    <h1>hola nombre introducido desde python {{ algun_nombre }}</h1>
+
+    <!-- ejemplo de uso de jinja, se realiza un ciclo con una
+    variable suministrada desde python --> 
+
+    <!--  --> 
+
+    {% if some_number == 1 %}
+    <h1>soy num valgo 1</h1>
+    {% else %}
+    <h1>num no vale 1</h1>
+    {% endif %}
+
+    {% for n in someList %}
+    <h1>n solito, {{ n }} </h1> <!-- imprime solo la n size veces, o sea NO los valores de la lista -->
+    <hi> {{ n }} </hi> <!--  n debe ir en doble llave para traer los valores --> 
+    {% endfor %}
+
+    
+</body>
+</html>
